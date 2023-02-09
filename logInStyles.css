@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    background: #021B34;
+    width: 100vw;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.Container {
+    width: 70%;
+    height: 81.45%;
+    background-color: #FFF;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: relative;
+    max-width: 85%;
+    max-height: 81.45%;
+    margin: 0 auto;
+}
+
+.formContainer {
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form h3 {
+    font-size: 175%;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.1125em;
+    margin-bottom: 0.25em;
+}
+
+form h6 {
+    font-size: 75%;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 0.875%;
+    opacity: 0.475;
+    letter-spacing: 0.1em;
+}
+
+form .inputClass {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    color: #18191A;
+    height: 13.5%;
+}
+
+form input {
+    width: 63.75%;
+    height: 8.75%;
+    border: none;
+    outline: none;
+    margin: 0.125em auto;
+}
+
+form .inputClass input[type="text"] {
+    border-bottom: 2px solid #AAA6A6;
+    font-size: 0.8em;
+    font-weight: 500;
+    letter-spacing: 0.075em;
+    padding: 1.25em 0.8675em;
+    background: none;
+}
+
+form .inputClass label {
+    position: absolute;
+    left: 20.5%;
+    top: 46.75%;
+    transform: translateY(-50%);
+    font-weight: 400;
+    font-size: 0.825em;
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+    transition: 0.425s all ease-in-out;
+    cursor: auto;
+}
+
+form .inputField + label {
+    font-size: 0.625em;
+    top: 17.5%;
+    opacity: 0.375;
+}
+
+form input[type="submit"] {
+    font-size: 100%;
+    height: 9.75%;
+    font-weight: 600;
+    letter-spacing: 0.125em;
+    border-radius: 0.75em;
+    background: #082A4B;
+    color: #FFF;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    margin-top: 0.625em;
+}
+
+form input[type="submit"]:active {
+    transform: scale(0.75);
+}
+
+form input[type="submit"]:hover {
+    background: #021B34;
+}
+
+.leftContainer {
+    left: 0;
+    background-color: #082A4B;
+    border-radius: 1em 0 0 1em;
+    height: 100%;
+}
+
+.leftContainer img {
+    width: 100%;
+}
+
+.rightContainer {
+    left: 0;
+    transform: translateX(100%);
+}
+
+.leftContainer,
+.rightContainer {
+    width: 50%;
+}
+
+form .inputClass span {
+    padding: 0.05em;
+}
+
+.errorJS {
+    font-size: 0.675em;
+    font-weight: 600;
+    color: red;
+    opacity: 0.675;
+    left: 18%;
+    position: absolute;
+    letter-spacing: 0.0575em;
+}
+
+.errorBox {
+    margin: 1em auto 0.375em;
+    height: auto;
+    width: 63.875%;
+    background-color: #F8A1A1;
+    border-radius: 0.5em;
+    display: block;
+    padding: 0.25em 0;
+    border: 0.125em solid #E74C3C;
+}
+
+.errorBox .errorMessage {
+    color: #E74C3C;
+    font-size: 0.5em;
+    font-weight: 500;
+    letter-spacing: 0.0875em;
+    padding: 0.1875em 0;
+    text-align: center;
+}
