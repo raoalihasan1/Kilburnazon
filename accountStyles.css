@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    background: #021B34;
+    width: 100vw;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85em 5.25%;
+    background: #082A4B;
+    width: 100%;
+    height: 4.5em;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+header a img {
+    width: 31.25%;
+}
+
+header nav {
+    width: 150%;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 3em 2em;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li a {
+    font-weight: 600;
+    font-size: 90%;
+    color: #EDF0F1;
+    letter-spacing: 0.165em;
+    float: left;
+    transition: all 0.425s ease-in-out 0s;
+}
+
+nav ul li a:hover {
+    color: rgba(217, 83, 79, 0.90);
+}
+
+header nav ul li div {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 1.5em;
+    transition: all 0.425s ease-in-out 0s;
+    border-radius: 0.875em;
+    width: 75%;
+}
+
+header nav ul li div button {
+    color: #FFF;
+    padding: 0.5em 0.25em;
+    background-color: rgba(217, 83, 79, 0.65);
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font-size: 85%;
+    border-radius: 0.875em;
+    font-weight: 600;
+    letter-spacing: 0.165em;
+    transition: all 0.425s ease-in-out 0s;
+    width: 91.875%;
+    border: none;
+    outline: none;
+}
+
+header nav ul li div button:hover {
+    background-color: rgba(217, 83, 79, 0.875);
+    width: 91.875%;
+}
+
+header nav ul li div a:hover {
+    color: #DDD;
+}
+
+#logOutDropDown {
+    cursor: pointer;
+}
+
+.showDropDown {
+    display: block;
+}
+
+.tableEmployees {
+    max-height: 60%;
+    overflow-y: auto;
+    width: 89.5%;
+    top: 37.5%;
+    position: absolute;
+    border-radius: 0.875em;
+    border: 0.25em solid #082A4B;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.tableEmployees .employeeDetails {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tableEmployees .employeeDetails tr {
+    background: green;
+    overflow: scroll;
+    text-align: center;
+}
+
+.tableEmployees .employeeDetails tr th, .tableEmployees .employeeDetails tr td {
+    font-size: 80%;
+    width: 20%;
+}
+
+.tableEmployees .employeeDetails tr th {
+    font-weight: 700;
+    font-size: 80%;
+    letter-spacing: 0.075em;
+    padding: 0.5em 2em;
+    background-color: #EDF0F1;
+}
+
+.tableEmployees .employeeDetails tr td {
+    padding: 0.375em 2em;
+    font-weight: 400;
+    font-size: 75%;
+    letter-spacing:0.0625em;
+    color: #EDF0F1;
+}
+
+.tableEmployees .employeeDetails tr:nth-child(even) {
+    background-color: #082A4B;
+}
+
+.tableEmployees .employeeDetails tr:nth-child(odd) {
+    background-color: #021B34;
+}
+
+.tableEmployees .employeeDetails tr td:nth-child(1) {
+    font-weight: 700;
+    letter-spacing: 0.0875em;
+}
+
+.tableEmployees .employeeDetails tr td button {
+    width: 100%;
+    padding: 0.25em 1em;
+    font-size: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.0675em;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+    color: #EDF0F1;
+    transition: all 0.425s ease-in-out;
+}
+
+.tableEmployees .employeeDetails tr td #Edit {
+    background: #4CE970;
+}
+
+.tableEmployees .employeeDetails tr td #Edit:hover {
+    background: #0BAA30;
+}
+
+.tableEmployees .employeeDetails tr td #Delete {
+    background: #E54B58;
+}
+
+.tableEmployees .employeeDetails tr td #Delete:hover {
+    background: #721C24;
+}
+
+.Container {
+    width: 80%;
+    height: 81.5%;
+    background-color: #FFF;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: relative;
+    top: 2.2em;
+}
+
+.leftContainer, .rightContainer {
+    position: absolute;
+    height: 100%;
+    top: 5.875em;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form .titleContainer {
+    position: relative;
+    margin-bottom: 32.875%;
+}
+
+form h3 {
+    font-size: 150%;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.1em;
+}
+
+form h6 {
+    font-size: 65%;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 0.75%;
+    opacity: 0.475;
+    letter-spacing: 0.15em;
+}
+
+form .inputClass {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    color: #18191A;
+    height: 12.25%;
+}
+
+form .inputClass.Name, form .inputClass.Details, form .inputClass.addressDetails {
+    flex-direction: row;
+    width: 100%;
+    top: 2.125%;
+}
+
+form .inputClass.Details .Details, form .inputClass.Name .Name, form .inputClass.addressDetails .addressDetails {
+    width: 50%;
+}
+
+form .inputClass.Name input[name="firstName"], form .inputClass.Details input[name="DOB"], form .inputClass.addressDetails select {
+    width: 51.875%;
+    margin-left: 36.25%;
+}
+
+form .inputClass.Details input[name="DOB"] {
+    width: 55%;
+}
+
+form input {
+    width: 63.75%;
+    height: 8.75%;
+    border: none;
+    outline: none;
+    margin: 0.125em auto;
+}
+
+form .inputClass input[type="text"], form .inputClass input[type="date"] {
+    border-bottom: 2px solid #AAA6A6;
+    font-size: 81.25%;
+    font-weight: 500;
+    letter-spacing: 0.075em;
+    padding: 1.25em 0.8675em;
+    background: none;
+}
+
+form .inputClass select, .searchBar form.displayProcedures select {
+    width: 63.75%;
+    height: 50%;
+    border-radius: 0.5em;
+    outline: none;
+    margin: 0 auto;
+    padding: 0.25em 0.625em;
+    opacity: 0.6;
+    font-weight: 400;
+    font-size: 0.7em;
+    letter-spacing: 0.05em;
+    border: 2px solid #AAA6A6;
+}
+
+form .leftContainer .inputClass select {
+    width: 60%;
+    margin-top: 3.4%;
+}
+
+form .inputClass select option {
+    font-size: 100%;
+    font-weight: 500;
+    padding: 1.25em 0.9125em;
+}
+
+form input[type="submit"] {
+    font-size: 100%;
+    font-weight: 600;
+    letter-spacing: 0.125em;
+    border-radius: 0.75em;
+    background: #082A4B;
+    color: #FFF;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    margin-top: 0.875em;
+    height: 82.5%;
+}
+
+form input[type="submit"]:active {
+    transform: scale(0.75);
+}
+
+form input[type="submit"]:hover {
+    background: #021B34;
+}
+
+.leftContainer {
+    left: 0;
+    height: 100%;
+}
+
+.rightContainer {
+    left: 0;
+    transform: translateX(100%);
+}
+
+.leftContainer,
+.rightContainer {
+    width: 50%;
+}
+
+form .inputClass span {
+    padding: 0.05em;
+}
+
+.errorJS {
+    font-size: 0.65em;
+    font-weight: 600;
+    color: red;
+    opacity: 0.675;
+    left: 18.125%;
+    position: absolute;
+    letter-spacing: 0.0575em;
+}
+
+form .inputClass.Name #lastNameError .errorJS, form .inputClass.Details #salaryError .errorJS, .inputClass.addressDetails #postCodeError .errorJS {
+    left: 50%;
+}
+
+.errorBox {
+    margin: 0.5em auto;
+    height: auto;
+    width: 27.5%;
+    background-color: #F8A1A1;
+    border-radius: 0.5em;
+    display: block;
+    padding: 0.25em 0;
+    border: 0.125em solid #E74C3C;
+}
+
+.errorBox .errorMessage {
+    color: #E74C3C;
+    font-size: 0.5em;
+    font-weight: 500;
+    letter-spacing: 0.0875em;
+    padding: 0.1em 0;
+    text-align: center;
+}
+
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+}
+
+.searchBar form {
+    background-color: #EDF0F1;
+    padding: 0.5em 1em 0.5em 2.925em;
+    margin: 0 1em;
+    height: 100%;
+    border-radius: 0.875em;
+} 
+
+.searchBar form.searchEmployee {
+    min-width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.searchBar form.searchEmployee .inputClass {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.searchBar form.searchEmployee .inputClass .inputElements {
+    position: relative;
+    width: 100%;
+}
+
+.searchBar form.searchEmployee .inputClass.searchEmployee {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 95.125%;
+}
+
+.searchBar form.searchEmployee .inputClass.searchEmployee select, .searchBar form.displayProcedures select {
+    font-size: 0.75em;
+    padding: 0.5em 1em;
+    margin: 1em 1em 1em 0;
+    width: 90%;
+}
+
+.searchBar form.displayProcedures select {
+    width: 88.825%;
+    height: 32.5%;
+    margin: 1em 0;
+}
+
+.searchBar form.searchEmployee .inputClass .inputElements input {
+    width: 85%;
+    padding: 0.675em 0.9em;
+    letter-spacing: 0.1em;
+}
+
+.searchBar form.searchEmployee .inputClass .inputElements label {
+    position: absolute;
+    left: 5%;
+    top: 55%;
+    transform: translateY(-50%);
+    font-weight: 400;
+    font-size: 0.825em;
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+    transition: 0.425s all ease-in-out;
+    cursor: auto;
+}
+
+form .inputField + label {
+    font-size: 0.625em;
+    top: 17.5%;
+    opacity: 0.375;
+}
+
+.searchBar form.displayProcedures {
+    width: 100%;
+    height: 100%;
+    padding: 0.6375em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.searchBar form button {
+    outline: none;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    border-radius: 0.5em;
+    color: #EDF0F1;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s ease-in-out;
+}
+
+.searchBar form.displayProcedures button {
+    width: 88.825%;
+    padding: 2.5% 0;
+    font-size: 0.925em;
+    background-color: #4CE970;
+}
+
+.searchBar form.searchEmployee .inputClass.searchEmployee button {
+    width: 47.5%;
+    padding: 0.4175em 1em;
+    font-size: 0.925em;
+    background-color: #E54B58;
+}
+
+.searchBar form.displayProcedures button:hover {
+    background-color: #0BAA30;
+}
+
+.searchBar form.searchEmployee .inputClass.searchEmployee button:hover {
+    background-color: #721C24;
+}
+
+.resultContainer {
+    width: 89.5%;
+    background-color: #082A4B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    position: absolute;
+    top: 37.5%;
+    border-radius: 0.875em;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    opacity: 0.5;
+    color: #EDF0F1;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.resultContainer i {
+    font-size: 1.5em;
+    padding-left: 0.5em;
+}
